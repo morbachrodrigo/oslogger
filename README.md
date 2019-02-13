@@ -1,5 +1,5 @@
 # OSLogger
-Simple log wrapper for Apple's os_log API.
+Simple log wrapper for Apple's [`os_log`](https://developer.apple.com/documentation/os/logging) API.
 
 # TODO
 - [ ] Improve message formatting
