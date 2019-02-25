@@ -55,10 +55,10 @@ public protocol OSLoggerProtocol {
     static func error(systemLog: OSSystemLog, _ message: StaticString, _ args: CVarArg...)
     
     static func fault(_ message: StaticString, _ args: CVarArg...)
-    static func fault(systemLog: OSSystemLog, _ message: StaticString, _ args: CVarArg...)
+    static func fault(systemLog: OSSystemLog, _ message: StaticString, _ args: CVarArg...)    
 }
 
-public class OSLogger {
+public class OSLogger: OSLoggerProtocol {
     
     private class func log(_ level: OSLogType = .default, _ message: StaticString, _ args: CVarArg...) {
         os_log(message, type: level, args)
