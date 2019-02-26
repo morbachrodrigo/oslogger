@@ -12,15 +12,15 @@ public struct OSSystemLog {
     
     static var bundleIdentifier = Bundle.main.bundleIdentifier!
     
-    static let `default` = OSSystemLog(subsystem: bundleIdentifier, category: OSSystemLog.Category.default)
-    static let ui = OSSystemLog(subsystem: bundleIdentifier, category: OSSystemLog.Category.ui)
-    static let network = OSSystemLog(subsystem: bundleIdentifier, category: OSSystemLog.Category.network)
-    static let user = OSSystemLog(subsystem: bundleIdentifier, category: OSSystemLog.Category.user)
+    static let `default` = OSSystemLog(withSubsystem: bundleIdentifier, category: OSSystemLog.Category.default)
+    static let ui = OSSystemLog(withSubsystem: bundleIdentifier, category: OSSystemLog.Category.ui)
+    static let network = OSSystemLog(withSubsystem: bundleIdentifier, category: OSSystemLog.Category.network)
+    static let user = OSSystemLog(withSubsystem: bundleIdentifier, category: OSSystemLog.Category.user)
     
     let subsystem: String?
     let category: String
     
-    init(subsystem: String? = nil, category: String) {
+    init(withSubsystem subsystem: String? = nil, category: String) {
         self.subsystem = subsystem
         self.category = category
     }
